@@ -1,4 +1,11 @@
-os
-threading
+thread
 requests
 argparse
+requests
+setuptools
+bs4
+defusedxml
+requests_ntlm
+jinja2
+colorama
+pyparsing
