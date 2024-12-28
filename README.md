@@ -48,6 +48,12 @@ Fast CTF is a Python-based tool designed for Capture The Flag (CTF) competitions
    ```bash
    chmod +x run.py
    ```
+
+   ```bash
+   python3 setup.py sdist bdist_wheel                                      
+   pip install .
+   ```
+
 3. Ensure required Python packages are installed:
    ```bash
    pip install argparse
@@ -76,27 +82,27 @@ Fast CTF is a Python-based tool designed for Capture The Flag (CTF) competitions
 
 #### Running `nmap` and `dirsearch` with verbose output
 ```bash
-sudo python3 run.py -ui 192.168.1.1 -t nmap,dirsearch -v
+sudo fastctf -ui 192.168.1.1 -t nmap,dirsearch -v
 ```
 
 #### Running `hydra` with a username and wordlist
 ```bash
-sudo python3 run.py -ui 192.168.1.1 -t hydra -l admin -w /path/to/wordlist -p http -s
+sudo fastctf -ui 192.168.1.1 -t hydra -l admin -w /path/to/wordlist -p http -s
 ```
 
 #### Running `sqlmap` on a URL
 ```bash
-sudo python3 run.py -ui http://example.com -t sqlmap
+sudo fastctf -ui http://example.com -t sqlmap
 ```
 
 #### Cracking a hash with `john`
 ```bash
-sudo python3 run.py -t john -w /path/to/wordlist -hf /path/to/hashfile
+sudo fastctf -t john -w /path/to/wordlist -hf /path/to/hashfile
 ```
 
 #### Cracking a hash with `hashcat`
 ```bash
-sudo python3 run.py -t hashcat -w /path/to/wordlist -hf /path/to/hashfile
+sudo fastctf -t hashcat -w /path/to/wordlist -hf /path/to/hashfile
 ```
 
 ---
