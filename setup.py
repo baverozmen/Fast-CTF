@@ -5,13 +5,13 @@ setup(
     version="1.0.0",
     author="baverozmen",
     description="Fast CTF Automation Tool",
-    py_modules=["fastctf"], 
+    py_modules=["run"], 
     install_requires=[
         "argparse",
     ],
     entry_points={
         "console_scripts": [
-            "fastctf=fastctf:main",  
+            "fastctf=run:main",  
         ],
     },
 )
